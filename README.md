@@ -4,6 +4,10 @@ The Traveling Salesman Problem (PCV) is a problem that tries to determine the sh
 
 A genetic algorithm (GA) is a search technique used in computer science to find approximate solutions to optimization and search problems, they are a particular class of evolutionary algorithms that use techniques inspired by evolutionary biology such as heredity, mutation, natural selection, and recombination (or crossing over).
 
+## About Implementation
+
+The algorithm is written in python language, it has been adapted to include the chosen datasets and provide more graphics as needed.
+
 ## Run
 To download the algorithm, just have Git installed and run the following command:
 
