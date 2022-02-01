@@ -1,11 +1,15 @@
-import numpy as random
+import functions as fct
 import matplotlib.pyplot as plt
+from dataset import usc312, sgb128, wg59
 
-from functions import City, Fitness, createRoute, initialPopulation, rankRoutes, selection, matingPool, breed, breedPopulation, mutate, mutatePopulation, nextGeneration, geneticAlgorithm
+auxList = []
+fig, ax = plt.subplots()
 
-cityList = []
+for i in usc312:
+  auxList.append(fct.City(x = i[0], y = i[1]))
+  ax.scatter(x = i[0], y = i[1])
 
-for i in range(0,25):
-    cityList.append(City(x=int(random.random() * 200), y=int(random.random() * 200)))
+plt.show()
+fct.geneticAlgorithmPlot(population=auxList, popSize=500, eliteSize=20, mutationRate=0.01, generations=500)
 
-geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
+
